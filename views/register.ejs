@@ -1,18 +1,59 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Book Genre</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/navigation/">
+
+    <!-- Bootstrap core CSS -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+      <meta name="generator" content="Jekyll v4.1.1">
+      <title>Book Genre</title>
+  
+      <link rel="canonical" href="https://getbootstrap.com/navigation/">
+  
+      <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  
+      <!-- Custom styles for this template -->
+      <link href="/css/navigation.css" rel="stylesheet">
+    </head>
+    
+    <!-- Custom styles for this template -->
+  </head>
+
 <body style="background-repeat: no-repeat; background-size: 70% 100%;
 ;background-image: url(https://img.jakpost.net/c/2016/08/18/2016_08_18_10003_1471514391._large.jpg)">
  <div style="padding-left:70%;">
+  <%  if ( alert=="alert" ) { %>  
 
+  <div class="alert alert-warning" role="alert">
+  <div style="padding-left: 80px;">
+    <%= message %>
+  </div>
+  </div>
+
+  <% }  %> 
 
 <div  style="width:600px;; background-color: white;height: 100%;">
       <h1 class="text-center mb-3">
-        <div style="padding-top: 150px; padding-left:80px;">
+        <div style="padding-top: 150px;padding-right: 150px;">
           <h2 style="font-size: 30px;color: black;">FILL YOUR DETAILS</h2>
 
-  
+        
         </div>
   
       </h1>
-      <form action="/register" method="POST">
+
+      <form action="/register" method="POST" class="validate">
      
 
         <div class="form-group"  style="padding-top: 5px; padding-bottom: 15px;padding-left: 68px;">
@@ -25,6 +66,7 @@
 
             placeholder="Enter Name"
             value="<%= typeof name != 'undefined' ? name : '' %>"
+            required
           />
         </div>
         
@@ -38,6 +80,7 @@
             class="form-control"
             placeholder="Enter Email"
             value="<%= typeof email != 'undefined' ? email : '' %>"
+            required
           />
         </div>
        
@@ -51,6 +94,7 @@
             class="form-control"
             placeholder="Create Password"
             value="<%= typeof password != 'undefined' ? password : '' %>"
+            required
           />
         </div>
          
@@ -64,6 +108,7 @@
             class="form-control"
             placeholder="Confirm Password"
             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            required
           />
         </div>
         <div style="padding-left: 68px;padding-top: 20px;">
@@ -80,3 +125,4 @@ Register          </button>
   </body>
 
 
+  </html>
